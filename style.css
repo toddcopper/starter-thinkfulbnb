@@ -1,57 +1,252 @@
-main {
-  margin-top: 60px;
+/* -------  General Styles ------- */
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
-main h1 {
-  margin: 0 10px;
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 10px 10px;
   text-align: center;
-  font-family: "Amatic SC", cursive;
-  font-size: 65px;
 }
 
-main h2 {
-  margin: 18px 0 12px 0;
-  border-bottom: 1px solid #5c4f41;
-  font-family: "Special Elite", cursive;
-  font-size: 24px;
-}
-
-main h3 {
-  margin: 18px 0 12px 0;
-  border-bottom: 1px solid #5c4f41;
-  font-family: "Special Elite", cursive;
+h3 {
   font-size: 18px;
+  font-weight: 500;
 }
 
-main p {
-  font-family: "Roboto", sans-serif;
-  margin-top: 0;
+p {
+  line-height: 1.5em;
+  margin: 0;
 }
 
-img {
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #00a699;
+  color: #fff;
+}
+
+main img {
+  width: 100px;
+}
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* -------  Navigation ------- */
+
+header {
+  display: flex;
+  background-color: #ff385c;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Pangolin", cursive;
+  font-size: 72px;
+  color: #fff;
+}
+#menu{
+  display: flex;
+  
+}
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* -------  Search Form ------- */
+form {
+  border: 2px solid #ff385c;
+  padding: 10px;
+}
+form > div{
+  display: flex;
+  justify-content: space-between;
+
+}
+form label {
+  font-weight: bold;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+form button {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
   width: 100%;
 }
+/* about */
+#about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* ideas */
+#ideas{
+  display: flex;
+  flex-direction: column;
+}
+#ideas img{
+  width: 100%;
+}
+#host img{
+  width: 100%;
+}
+/* -------  Footer ------- */
 
-@media all and (min-width: 800px){
-  .row{
+footer {
+  background-color: #ff385c;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+@media all and (min-width: 480px){
+  header {
     display: flex;
-    border: 1px solid black;
-    gap: 10px;
-
+    background-color: #ff385c;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
+  .logo{
+    font-size: 36px;
+  }
+ nav a{
+    font-size: 14px;
+  }
+  /* ---form--- */
+  form{
+    display: flex;
+    font-size: 10px;
+    gap: 4px;
+  }
+  form > div{
+    flex-direction: column;
+    width: 18%;
+    justify-content: space-between;
+  }
+   form input{
+    width:80%;
+  }
+  form select{
+    width: 80%;
+  }
+  form button{
+    display: flex;
+    width: 20%;
+    font-size: 16px;
+    justify-content: center;
+  }
+  /* --about-- */
+  .inline{
+    display:flex;
+    align-items: center;
+    justify-content;
+}
+.inline div{
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  margin: 5px
   
-  .left{
-    flex: 1;
+}
+
+
+ #about img{
+width:50%;
+margin:5px;
+
+}
+
+.inline p{
+  flex:1;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+/* ---ideas--- */
+.row{
+  display: flex;
+  gap: 10px;
+}
+.resize {
+  width: 50%;
+}
+#host{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.img{
+  display: flex;
+  width: 50%;
+  
+}
+}
+@media all and (max-width:349px){
+  .logo{
+    font-size: 60px;
   }
-
-  .right{
-    flex: 2;
+}
+@media all and (min-width: 1000px){
+  .logo{
+    font-size: 72px;
   }
-
-  .img-box{
-    flex: 1;
-    border: 1px solid black;
+  nav{
+    font-size: 22px;
   }
-
-
 }
